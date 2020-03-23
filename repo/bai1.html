@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Check So NgTo</title>
+</head>
+<body>
+<script>
+    let array=[];
+    function checkSoNgTo(number) {
+        let dem= 0;
+        if (number<2){
+            return false;
+        }else {
+            for (let i = 1; i <= number / 2; i++) {
+                if (number % i === 0) {
+                    dem++;
+                }
+            }
+            if (dem < 2)
+                return true;
+            return false
+        }
+    }
+    let t=0;
+    for (let i=0;i<5;i++){
+        array[i]= parseInt(prompt("Moi nhap vao phan tu thu "+i));
+        if (checkSoNgTo(array[i])===true){
+            t+=array[i];
+        }
+    }
+    alert(t);
+</script>
+</body>
+</html>
